@@ -1,0 +1,34 @@
+#PostgreSQL DB
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/procesador_pagos_db
+    username: postgres
+    password: a
+  jpa:
+    hibernate:
+      ddl-auto: update # Automatically updates DB schema. Use "validate" in production.
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+# Microsoft Graph API for reading emails
+azure:
+  graph:
+    tenant-id: 0f3dc3aa-441d-4e6a-b1d3-c4a0e2313462
+    client-id: fad67f80-1180-4504-8ad5-5d87bb79022c
+    client-secret: A558Q~W6Gdj3D6M5SwvgTOCxOJa0zq7oRtxC1cRq
+    user-id: 5a4146ec-ee2f-4009-8adf-3eda7e1aaee3
+
+netsuite:
+  api:
+    account-id: 9519366-sb1
+    consumer-key: ce6a9c35977890b311ea7f7c674a9fdb911204bc347a8ad32814144199fb126e
+    consumer-secret: d858eb7cc673e8631b94d06a496e59b6be57a6369a73becd60b25360c3c86bf8
+    token-id: 18ebaa5d564c96c240a4051d8c37f84a61f046144ffafbcd3a01adcc5922f4b5
+    token-secret: 5ec39768aa38e879b2f6b29ef1e5cf2a632663be3f6cffb14b7f538a1ba5c9f9
+
+logging:
+  level:
+    root: INFO
+    com.mausoleos.PaymentBanregio: DEBUG
